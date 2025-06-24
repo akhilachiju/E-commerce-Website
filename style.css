@@ -62,7 +62,7 @@ nav {
 
 .slider {
     background-image: url(./image/banner.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
     overflow: hidden;
     background-size: cover;
 }
@@ -89,7 +89,6 @@ nav {
     background: rgba(255, 0, 0, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* Safari support */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     animation: shake 0.5s infinite;
@@ -191,4 +190,35 @@ nav {
     background: linear-gradient(135deg, #34ce57, #1e7e34);
     transform: scale(1.1) translateY(-3px);
     box-shadow: 0 12px 24px rgba(40, 167, 69, 0.6);
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
 }
