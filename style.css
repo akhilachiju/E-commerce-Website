@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Lato", sans-serif;
     padding: 0;
@@ -62,7 +66,7 @@ nav {
 
 .slider {
     background-image: url(./image/banner.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     overflow: hidden;
     background-size: cover;
 }
@@ -221,4 +225,83 @@ nav {
     color: gray;
     width: 50%;
     height: 100px;
+}
+
+.product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.productImg {
+    width: 50%;
+}
+
+.productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+
+.productTitle {
+    font-size: 75px;
+    font-weight: 900;
+}
+
+.productDesc {
+    font-style: 24px;
+    color: gray;
+}
+
+.colors,
+.sizes {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color:last-child {
+    background-color: darkblue;
+}
+
+.size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.productButton {
+    float: right;
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    background: linear-gradient(135deg, #28a745, #218838);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.4);
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.productButton:hover {
+    background: linear-gradient(135deg, #34ce57, #1e7e34);
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 24px rgba(40, 167, 69, 0.6);
 }
