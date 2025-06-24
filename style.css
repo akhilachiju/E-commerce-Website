@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -62,6 +66,12 @@ nav {
 
 .menuItem:hover {
     color: white;
+}
+
+.menuItem.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    color: green;
 }
 
 .slider {
@@ -236,6 +246,8 @@ nav {
 
 .productImg {
     width: 50%;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
 }
 
 .productDetails {
@@ -243,11 +255,11 @@ nav {
     top: 10%;
     right: 0;
     width: 40%;
-    padding: 50px;
+    padding: 40px;
 }
 
 .productTitle {
-    font-size: 75px;
+    font-size: clamp(32px, 6vw, 75px);
     font-weight: 900;
 }
 
@@ -284,7 +296,8 @@ nav {
 }
 
 .productButton {
-    float: right;
+    position: absolute;
+    top: 100%;
     padding: 15px 30px;
     font-size: 24px;
     background-color: black;
@@ -304,4 +317,117 @@ nav {
     background: linear-gradient(135deg, #34ce57, #1e7e34);
     transform: scale(1.1) translateY(-3px);
     box-shadow: 0 12px 24px rgba(40, 167, 69, 0.6);
+}
+
+.payment {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.payTitle {
+    font-size: 24px;
+    color: #444;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.payInput {
+    padding: 10px;
+    margin: 6px 0 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.payInput::placeholder {
+    color: #aaa;
+}
+
+.cardIcons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.cardIcon {
+    width: 40px;
+    height: auto;
+    opacity: 0.8;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.cardIcon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.sm {
+    flex: 1;
+}
+
+.payButton {
+    margin-top: 20px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payButton:hover {
+    background-color: #218838;
+}
+
+.close {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    background-color: #bbb;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close:hover {
+    background-color: #999;
 }
